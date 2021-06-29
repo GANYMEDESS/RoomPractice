@@ -6,7 +6,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import com.bae.roompractice.BuildConfig.DEBUG
 
-class BaeApplication: Application()
+class JSApplication: Application()
 {
     companion object{
         val debug = DEBUG
