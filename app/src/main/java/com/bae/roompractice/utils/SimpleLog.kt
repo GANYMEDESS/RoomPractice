@@ -1,7 +1,7 @@
 package com.bae.roompractice.utils
 
 import android.util.Log
-import com.bae.roompractice.application.BaeApplication
+import com.bae.roompractice.application.JSApplication
 
 object SimpleLog
 {
@@ -9,35 +9,35 @@ object SimpleLog
      * Log Level Error
      */
     fun e(message: String) {
-        if (BaeApplication.debug) Log.e(Constants.TAG, buildLogMsg(message))
+        if (JSApplication.debug) Log.e(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Warning
      */
     fun w(message: String) {
-        if (BaeApplication.debug) Log.w(Constants.TAG, buildLogMsg(message))
+        if (JSApplication.debug) Log.w(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Information
      */
     fun i(message: String) {
-        if (BaeApplication.debug) Log.i(Constants.TAG, buildLogMsg(message))
+        if (JSApplication.debug) Log.i(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Debug
      */
     fun d(message: String) {
-        if (BaeApplication.debug) Log.d(Constants.TAG, buildLogMsg(message))
+        if (JSApplication.debug) Log.d(Constants.TAG, buildLogMsg(message))
     }
 
     /**
      * Log Level Verbose
      */
     fun v(message: String) {
-        if (BaeApplication.debug) Log.v(Constants.TAG, buildLogMsg(message))
+        if (JSApplication.debug) Log.v(Constants.TAG, buildLogMsg(message))
     }
 
 
