@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RoomPractice</string>
+    <string name="btn_add">Add</string>
+
+    <string name="title_user_add">Add User Profile</string>
+    <string name="lbl_user_name">NAME : </string>
+    <string name="hint_user_name">Input User Name.</string>
+    <string name="lbl_user_age">AGE : </string>
+    <string name="hint_user_age">Input User Age.</string>
+    <string name="lbl_user_phone">PHONE : </string>
+    <string name="hint_user_phone">Input User Phone Number.</string>
+    <string name="lbl_user_sex">SEX : </string>
+    <string name="hint_user_sex">Input User Sex.</string>
+    <string name="btn_add_user">Add User</string>
+    <string name="radio_btn_male">MALE</string>
+    <string name="radio_btn_female">FEMALE</string>
+
+    <string name="label_no_users_added_yet">No users added yet!!</string>
+</resources>
