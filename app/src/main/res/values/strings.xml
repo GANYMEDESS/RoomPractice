@@ -14,4 +14,6 @@
     <string name="btn_add_user">Add User</string>
     <string name="radio_btn_male">MALE</string>
     <string name="radio_btn_female">FEMALE</string>
+
+    <string name="label_no_users_added_yet">No users added yet!!</string>
 </resources>
