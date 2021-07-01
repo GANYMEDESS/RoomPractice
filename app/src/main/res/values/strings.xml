@@ -12,4 +12,6 @@
     <string name="lbl_user_sex">SEX : </string>
     <string name="hint_user_sex">Input User Sex.</string>
     <string name="btn_add_user">Add User</string>
+    <string name="radio_btn_male">MALE</string>
+    <string name="radio_btn_female">FEMALE</string>
 </resources>

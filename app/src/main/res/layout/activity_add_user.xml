@@ -113,26 +113,39 @@
         android:text="@string/lbl_user_sex"
         android:textColor="@color/blue_grey_900"
         android:textSize="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="@+id/et_user_sex"
-        app:layout_constraintTop_toTopOf="@+id/et_user_sex"
+        app:layout_constraintBottom_toBottomOf="@+id/radio_group"
+        app:layout_constraintTop_toTopOf="@+id/radio_group"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
         />
 
-    <EditText
-        android:id="@+id/et_user_sex"
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:orientation="horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_user_sex"
-        android:inputType="number"
-        android:autofillHints="@string/hint_user_sex"
-        android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/guideline1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@id/et_user_phone"
-        />
+        >
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_weight="1"
+            android:text="@string/radio_btn_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_weight="1"
+            android:text="@string/radio_btn_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+
 
     <Button
         android:id="@+id/btn_add_user"
@@ -142,7 +155,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_user_sex"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group"
         />
 
     <androidx.constraintlayout.widget.Guideline
