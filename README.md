@@ -1,2 +1,8 @@
 # RoomPractice
-Android Room Practice
+Android Jetpack RoomDatabse Practice
+
+-Dao-
+Insert 
+Select
+
+livedata, databinding, etc..
