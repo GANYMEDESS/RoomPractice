@@ -1,15 +1,23 @@
 package com.bae.roompractice.view.activities
 
 import android.os.Bundle
-import android.widget.RadioButton
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.bae.roompractice.application.JSApplication
 import com.bae.roompractice.databinding.ActivityAddUserBinding
+import com.bae.roompractice.model.entities.JSUser
 import com.bae.roompractice.utils.SimpleLog
+import com.bae.roompractice.view.viewmodel.JSUserViewModel
+import com.bae.roompractice.view.viewmodel.JSUserViewModelFactory
 
 class AddUserActivity: AppCompatActivity()
 {
     private lateinit var mAddUserBinding: ActivityAddUserBinding
+
+    private val mJSUserViewModel: JSUserViewModel by viewModels {
+        JSUserViewModelFactory((application as JSApplication).repository)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +58,31 @@ class AddUserActivity: AppCompatActivity()
                     ).show()
                 }
                 else -> {
-                    SimpleLog.i("All Clear Add User Info")
+                    val name = mAddUserBinding.etUserName.text.toString().trim{it <= ' '}
+                    val age = mAddUserBinding.etUserAge.text.toString().trim{it <= ' '}
+                    val phone = mAddUserBinding.etUserPhone.text.toString().trim{it <= ' '}
+                    var sex = ""
+                    when (btnId) {
+                        mAddUserBinding.rbMale.id -> {
+                            sex = "MALE"
+                        }
+                        mAddUserBinding.rbFemale.id -> {
+                            sex = "FEMALE"
+                        }
+                    }
+
+                    SimpleLog.d("Data All Input ---->name : $name age : $age phone : $phone sex : $sex")
+                    val user = JSUser(
+                        name,
+                        age,
+                        phone,
+                        sex
+                    )
+
+                    mJSUserViewModel.insert(user)
+                    SimpleLog.d("Data Input Success")
+
+                    finish()
                 }
             }
         }
