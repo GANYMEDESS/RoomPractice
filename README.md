@@ -1,8 +1,13 @@
 # RoomPractice
 Android Jetpack RoomDatabse Practice
 
--Dao-
-Insert 
-Select
+Dao
+
+->Insert
+
+
+->Select
+
+MVVM Pattern.
 
 livedata, databinding, etc..
